@@ -14,7 +14,6 @@ XAI Viz is a visualization tool for convolutional Keras models. It uses [Feature
 # Installation
 
 - If your model requires special input preprocessing clone the repo and update the prepare_input function in backend.util to your needs.
-- 
 - After that install the requirements.txt and run the install script to generate an executable or simply run main.py.
 
 - This application is designed for and tested with python 3.7 and tensorflow 2.7.
