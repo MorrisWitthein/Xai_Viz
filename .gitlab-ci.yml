@@ -1,0 +1,18 @@
+stages:
+    - build   
+
+build-app-job:
+    image: "ubuntu:20.04"
+    stage: build
+    artifacts:
+        expire_in: 1 week
+        paths:
+            - dist/XAIVIZ
+    script:
+        # Install packages
+        - "apt update"
+        - "apt -y install python3 python3-pip"
+        # Install PyInstaller
+        - "pip3 install -r requirements.txt"
+        # Build Binary
+        - "pyinstaller main.py --onefile -n XAIVIZ --add-data \"res:./res\""
